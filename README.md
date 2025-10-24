@@ -1,8 +1,13 @@
 # Hacker News Application
 
 # Applo Server
-~~~
-npm i apollo-server
+公式ドキュメント
+https://www.apollographql.com/docs/apollo-server/getting-started
+
+GraphQL Serverを起動しアクセスすると、Playgroundでテストできる
+
+~~~_
+npm i apollo-server graphql
 ~~~
 
 # Typescript
