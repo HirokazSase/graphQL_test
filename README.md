@@ -10,6 +10,38 @@ GraphQL Serverを起動しアクセスすると、Playgroundでテストでき�
 npm i apollo-server graphql
 ~~~
 
+## SQL / REST / GraphQL CRUD 対応表
+
+| 操作 | SQL | REST | GraphQL |
+|---|---|---|---|
+| 取得（Read） | SELECT | GET | Query |
+| 登録（Create） | INSERT | POST | Mutation |
+| 更新（Update） | UPDATE | PUT / PATCH | Mutation |
+| 削除（Delete） | DELETE | DELETE | Mutation |
+
+- 補足: REST の `PUT` は全置換、`PATCH` は部分更新。GraphQL は変更系はすべて `Mutation`、リアルタイム通知は `Subscription`。
+
+## PlayGroundでのコマンド
+基本はスキーマ定義に合わせて記載
+~~~gql
+mutation {
+  post(url: "https://news.ycombinator.com/", description: "Hacker News") {
+    id
+    description
+    url
+  }
+}
+
+
+query{
+  feed {
+    id
+    description
+    url
+  }
+}
+~~~
+
 # Typescript
 ~~~bash
 # 
@@ -65,3 +97,5 @@ codex run tests
 # 6. 質問・回答（ファイルへの変更なし）
 codex "What is the difference between domain and application layer in DDD?"
 ~~~
+
+
