@@ -41,6 +41,7 @@
     "noUncheckedSideEffectImports": true, // 副作用のないインポートを禁止
     "moduleDetection": "force", // モジュール検出を強制
     "skipLibCheck": true, // ライブラリの型チェックをスキップ
+    "strictNullChecks": true // null と undefined の厳密なチェック
   },
 
   "include": ["src"] // コンパイル対象フォルダ
